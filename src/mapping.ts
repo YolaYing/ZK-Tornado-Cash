@@ -2,10 +2,10 @@
 import { Address, require } from "@hyperoracle/zkgraph-lib";
 import { Bytes, Block, Event } from "@hyperoracle/zkgraph-lib";
 
-let addr_blacklist = Bytes.fromHexString("0x7169D38820dfd117C3FA1f22a697dBA58d90BA06");
-let esig_blacklist = Bytes.fromHexString("0x42e160154868087d6bfdc0ca23d96a1c1cfa32f1b72ba9ba27b69b98a0d819dc");
-let addr_mixer =  Bytes.fromHexString("0xd92992b49c39c917b6cc587c22e51f720c4b7062");
-let esig_mixer =  Bytes.fromHexString("0xb81e312ef0fd2fe7d15a46587c6f1254fb26f651c4fa8bba52a3817718902885");
+var addr_blacklist = Bytes.fromHexString("0x7169D38820dfd117C3FA1f22a697dBA58d90BA06");
+var esig_blacklist = Bytes.fromHexString("0x42e160154868087d6bfdc0ca23d96a1c1cfa32f1b72ba9ba27b69b98a0d819dc");
+var addr_mixer =  Bytes.fromHexString("0xd92992b49c39c917b6cc587c22e51f720c4b7062");
+var esig_mixer =  Bytes.fromHexString("0xb81e312ef0fd2fe7d15a46587c6f1254fb26f651c4fa8bba52a3817718902885");
 
 // (dummy) mixer contract that I wrote for this specific project 0xd92992b49c39c917b6cc587c22e51f720c4b7062
 // USDT contract 0x7169D38820dfd117C3FA1f22a697dBA58d90BA06
