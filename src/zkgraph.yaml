@@ -1,0 +1,27 @@
+specVersion: 0.0.2
+apiVersion: 0.0.2
+name: Proof_of_Blacklist
+description: "This zkGraph tracks blacklisted address on Sepolia USDT."
+repository: https://github.com/varun-doshi/Proof-of-Blacklist-zkGraph
+dataSources:
+  - kind: ethereum
+    network: sepolia
+    event:
+      - address: "0x7169D38820dfd117C3FA1f22a697dBA58d90BA06"
+        events:
+          - "AddedBlackList(address)"
+      - address: "0xD92992b49c39C917B6cC587c22E51F720c4b7062"
+        events:
+          - "Mixed(address, address)"
+
+
+
+mapping:
+  language: wasm/assemblyscript
+  file: ./mapping.ts
+  handler: handleBlocks
+
+dataDestinations:
+  - kind: ethereum
+    network: sepolia
+    address: "0x0000000000000000000000000000000000000001"
