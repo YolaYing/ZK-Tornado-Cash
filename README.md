@@ -8,10 +8,10 @@ Crypto Mixer is used for privacy-preserving applications, like Tornado Cash. Som
 
 The idea of zkSafeMixer is to query a blacklist of some tokens (here we used USDT for example, and can easily be extended to other tokens and even multiple tokens), and when a user trying to deposit money to a crypto mixer smart contract (here I used a dummy contract I wrote for this project), it checked whether or not any of the users are in the blacklist. If so, it will return a warning signal and potentially prevent the downstream contracts from taking the money.
 
-This was done by listening to multiple contracts (token contracts and mixer contracts) together in a zkgraph.
+This was done by listening to multiple contracts (token contracts and mixer contracts together in a zkgraph.
 
 
-(We talked with super helpful HO developers Lightman and Suning and learned that currently zkgraph only supports one block query per execution, but planned to add the feature to query multiple blocks together in the future. The current code logic will compile and work fine, but it won't make too many real-world sense right now because current zkGraph only allows querying one block at a time. It will make more sense once the feature is added, and no code change is required to make it work then. But it is fun to write an application code for the future feature though :)
+(We talked with super helpful HO developers Lightman and Suning and learned that currently zkgraph only supports one block query per execution, but planned to add the feature to query multiple blocks together in the future. The current code logic will compile and work fine, but it won't make too much real-world sense right now because the current zkGraph only allows querying one block at a time. It will make more sense once the feature is added, and no code change is required to make it work then. But it is fun to write an application code for the future feature though :)
 
  
 
