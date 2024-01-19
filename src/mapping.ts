@@ -45,12 +45,14 @@ export function handleBlocks(blocks: Block[]): Bytes {
         eventsByAcctEsig_blacklist.push(blocks[i].events[j]);
       }
     }
-    for (let j = 0; j < eventsByAcctEsig_blacklist.length; j++) {
-      let bytes_blacklisted_address: Bytes = eventsByAcctEsig_blacklist[j].data;
-      let blacklisted_address: Address = Address.fromBytes(
-        bytes_blacklisted_address
-      );
-      blacklist.add(blacklisted_address);
+    if (eventsByAcctEsig_blacklist.length > 0) {
+      for (let j = 0; j < eventsByAcctEsig_blacklist.length; j++) {
+        let bytes_blacklisted_address: Bytes = eventsByAcctEsig_blacklist[j].data;
+        let blacklisted_address: Address = Address.fromBytes(
+          bytes_blacklisted_address
+        );
+        blacklist.add(blacklisted_address);
+      }
     }
   }
 
