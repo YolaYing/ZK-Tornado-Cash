@@ -1,20 +1,17 @@
 # zkGraph zkSafeMixer
 
-#### This graph listen to the both USDT contract and the dummy mixer contract that I wrote for this project
+#### This graph listen to both USDT contract and the dummy mixer contract written for this project
 
 This zkgraph was lightly inspired by [proof of Blacklist](https://github.com/varun-doshi/Proof-of-Blacklist-zkGraph) and also [Vitalik's proof of innocence](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4563364). 
 
-Crypto Mixer is used for privacy perservaing application, like tornado cash. Sometimes, it mixs your innoncent money with other malicious users' money. It is important to guard against malicious users from using it.
+Crypto Mixer is used for privacy-preserving applications, like Tornado Cash. Sometimes, it mixes your innocent money with other malicious users' money. It is important to guard against malicious users from using it.
 
-The idea of zkSafeMixer is to query a blacklist of some tokens (here we used USDT for example, and can easily extended to other tokens and even mutiple tokens), and when a user trying to deposit money to a crypto mixer smart contract (here I used a dummy contract I wrote for this project), it checked weather or not any of the users are in the blacklist. If so, it will return a warning signal (1) and potentially prevent the downstream contracts from taking the money.
+The idea of zkSafeMixer is to query a blacklist of some tokens (here we used USDT for example, and can easily be extended to other tokens and even multiple tokens), and when a user trying to deposit money to a crypto mixer smart contract (here I used a dummy contract I wrote for this project), it checked whether or not any of the users are in the blacklist. If so, it will return a warning signal and potentially prevent the downstream contracts from taking the money.
 
-This was done by listen to mutiple contracts (token contracts and mixer contracts) together in a zkgraph.
+This was done by listening to multiple contracts (token contracts and mixer contracts) together in a zkgraph.
 
-notes: 
 
-We talked with super helpful HO developer Lightman and Suning, and learned that currently zkgraph only support one block query per execution, but planed to add the feature to query mutiple blocks together in the future. The current code logic will compile and work fine but right now it won't make too many real world sense because current zkGraph only allow to query one block at a time. It will make more sense once the feature is added, and no code change is required to make it work then.
-
-But it is fun to write an application code for the future feature though :)
+(We talked with super helpful HO developers Lightman and Suning and learned that currently zkgraph only supports one block query per execution, but planned to add the feature to query multiple blocks together in the future. The current code logic will compile and work fine, but it won't make too many real-world sense right now because current zkGraph only allows querying one block at a time. It will make more sense once the feature is added, and no code change is required to make it work then. But it is fun to write an application code for the future feature though :)
 
  
 
