@@ -22,6 +22,12 @@ It is fun to write an application code for the future feature though
 
 ####  
 
+## Test Contract and Block id
+when debugging execution and proof generation, you may use:
+- block id: 5111991
+- contract address: ef980824454e458a1ad4ec2510e485cce3ead0faac0
+
+or you can just use 'script.sh' to test the whole workflow(remember to fill in the zkgraph.config.ts)
 
 
 ## Usage CLI
